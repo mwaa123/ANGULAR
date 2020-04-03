@@ -1,0 +1,42 @@
+<div class="container-fluid">
+    <h2 class="text-center" style="color: white;">CREATE NEW QUOTE</h2>
+    <hr>
+    <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
+        <div class="form-group">
+  
+            <label for="name" style="color: white;">HEADER</label>
+            <input type="text" class="form-control" id="name" [(ngModel)]="newQuote.name" name="name" #name='ngModel' required style="background: transparent; color: white;">
+            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+              <p>Header is required</p>
+            </div>
+        </div>
+        <div class="form-group">
+  
+            <label for="description" style="color: white;">PUT DOWN YOUR QUOTE</label>
+            <textarea class="form-control" id="description" rows="4" [(ngModel)]="newQuote.description" name="description" #description="ngModel" required style="background: transparent;color: white;"></textarea>
+            <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
+              <p>QUOTE is required</p>
+            </div>
+        </div>
+        <div class="form-group">
+
+          <label for="author">AUTHOR</label>
+          <textarea class="form-control" id="author" rows="4" [(ngModel)]="newQuote.author" name="author" #author="ngModel" required style="background: transparent;color: white;" ></textarea>
+          <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+            <p>Author is required</p>
+          </div>
+      </div>
+
+        <div class="form-group">
+
+  
+            <label for="complete" style="color: white;background: transparent;" >WROTE ON :</label><br>
+            <input type='date' id="complete" required>
+            <!-- <input type='date' id="complete" [(ngModel)]="newQuote.completeDate" name="completeDate" #completeDate="ngModel" required>
+            <div [hidden]="completeDate.valid || completeDate.pristine" class="alert alert-danger">
+              <p>Date is required</p> -->
+            </div>
+
+        <button style="background: transparent;" type="submit" class="btn btn-success">Add quote</button>
+    </form>
+</div>

@@ -1,0 +1,21 @@
+<!-- <div class="container"> -->
+<div class="pic">
+    <h1 style="color: white;">A THOUGHT FOR A QUOTE </h1>
+    <hr>
+   
+    <div class="col-md-6" >
+        <app-quote-form (addQuote)="addNewQuote($event)"  ></app-quote-form>
+     </div>
+
+
+         <div class="card" style="background: transparent;text-emphasis-color: white;">
+             <p *ngFor='let quote of quotes;let i = index'>
+             {{quote.name}}<br>
+             <button  (click)='toggleDetails (i)'class="btn btn-primary">Toggle Details</button><br><br>
+             <app-quote-details style="color: white;"  *ngIf='quote.showDescription' [quote]='quote'(isUnsatisfied) = 'deleteQuote($event,i)'></app-quote-details><br>
+             </p>
+         </div>
+
+            
+</div>    
+<!-- </div> -->

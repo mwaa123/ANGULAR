@@ -1,0 +1,21 @@
+h1{
+    text-decoration: white;
+    height: 80px;
+    background-color: black;
+    text-align: center;
+    text-size-adjust: 20px;
+}
+.card{
+    height: 380px;
+    width: 400px;
+    border: 50px;
+    /* color: transparent; */
+    text-align: center;
+
+
+}
+.pic{
+    background-image: url(hot.gif);
+    /* background-repeat: no-repeat; */
+
+}

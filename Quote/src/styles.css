@@ -1,0 +1,4 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+html, body{
+    font-family: 'Gotu', sans-serif;
+}
